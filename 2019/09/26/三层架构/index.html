@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hello World | 博客</title>
+  <title>三层架构 | 博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="Hello World | 博客">
+  <meta name="description" content="三层架构 | 博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="my-second-blog">
@@ -270,9 +270,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-三层架构" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">三层架构</h1>
     
     <div class="article-meta">
         
@@ -282,7 +282,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-20 17:35:26'>2019-09-20 17:35</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-26 09:44:06'>2019-09-26 09:29</time>
         
     </div>
     <div class="article-meta">
@@ -304,7 +304,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#三层"><span class="toc-text">三层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三层架构的优劣势"><span class="toc-text">三层架构的优劣势</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -319,19 +319,30 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="三层"><a href="#三层" class="headerlink" title="三层"></a>三层</h1><ol>
+<li><strong>表现层(UI)</strong>  主要是指与用户交互的界面。用于接收用户输入的数据和显示处理后用户需要的数据。  </li>
+<li><strong>业务逻辑层(BLL)</strong>  UI层和DAL层之间的桥梁。实现业务逻辑。业务逻辑具体包含：验证、计算、业务规则等等。  </li>
+<li><strong>数据访问层(DAL)</strong>   主要实现对数据的增、删、改、查。将存储在数据库中的数据提交给业务层，同时将业务层处理的数据保存到数据库。（当然这些操作都是基于UI层的。用户的需求反映给界面（UI），UI反映给BLL，BLL反映给DAL，DAL进行数据的操作，操作后再一一返回，直到将用户所需数据反馈给用户）  </li>
+</ol>
+<h1 id="三层架构的优劣势"><a href="#三层架构的优劣势" class="headerlink" title="三层架构的优劣势"></a>三层架构的优劣势</h1><blockquote>
+<blockquote>
+<p>优势</p>
+<ol>
+<li>结构清晰、耦合度低</li>
+<li>可维护性高、可扩展性高</li>
+<li>利于开发任务同步进行，容易适应需求变化</li>
+</ol>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>劣势</p>
+<ol>
+<li>有时会导致级联的修改。这种修改尤其体现在自上而下的方向。如果在表示层中需要增加一个功能，为保证其设计符合分层式结构，可能需要在相应的业务逻辑层和数据访问层中都增加相应的代码  </li>
+<li>增加了代码量，增加了工作量，增加了复杂度</li>
+</ol>
+</blockquote>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -345,12 +356,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>三层架构</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-20, 17:35:26</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-20, 17:35:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/20/hello-world/" title="Hello World">http://yoursite.com/2019/09/20/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2019-09-26, 09:29:05</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-26, 09:44:06</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/26/三层架构/" title="三层架构">http://yoursite.com/2019/09/26/三层架构/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
