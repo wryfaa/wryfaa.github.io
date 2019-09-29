@@ -6,14 +6,17 @@
   <meta name="keywords" content>
   <meta name="description" content="三层架构 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta property="og:type" content="website">
-<meta property="og:title" content="my-second-blog">
-<meta property="og:url" content="http://yoursite.com/my-second-blog/index.html">
+<meta name="description" content="行锁和表锁的区别行锁特点 锁的粒度小，发生锁冲突的概率低、处理并发的能力强；开销大、加锁慢、会出现死锁加锁的方式 自动加锁。对于UPDATE、DELETE和INSERT语句，InnoDB(MySQL的数据库引擎之一，现为MySQL的默认存储引擎)会自动给涉及数据集加排他锁；对于普通SELECT语句，InnoDB不会加任何锁。   表锁特点 开销小、加锁快、无死锁；锁粒度大，发生锁冲突的概率高，高并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据库行锁和表锁的区别">
+<meta property="og:url" content="http://yoursite.com/2019/09/29/数据库行锁和表锁的区别/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="行锁和表锁的区别行锁特点 锁的粒度小，发生锁冲突的概率低、处理并发的能力强；开销大、加锁慢、会出现死锁加锁的方式 自动加锁。对于UPDATE、DELETE和INSERT语句，InnoDB(MySQL的数据库引擎之一，现为MySQL的默认存储引擎)会自动给涉及数据集加排他锁；对于普通SELECT语句，InnoDB不会加任何锁。   表锁特点 开销小、加锁快、无死锁；锁粒度大，发生锁冲突的概率高，高并">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T09:46:17.481Z">
+<meta property="og:updated_time" content="2019-09-29T02:10:16.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my-second-blog">
+<meta name="twitter:title" content="MySQL数据库行锁和表锁的区别">
+<meta name="twitter:description" content="行锁和表锁的区别行锁特点 锁的粒度小，发生锁冲突的概率低、处理并发的能力强；开销大、加锁慢、会出现死锁加锁的方式 自动加锁。对于UPDATE、DELETE和INSERT语句，InnoDB(MySQL的数据库引擎之一，现为MySQL的默认存储引擎)会自动给涉及数据集加排他锁；对于普通SELECT语句，InnoDB不会加任何锁。   表锁特点 开销小、加锁快、无死锁；锁粒度大，发生锁冲突的概率高，高并">
 
 
 <link rel="icon" href="/img/avatar.jpg">
