@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>数据库行锁和表锁的区别 | Blog</title>
+  <title>MySQL数据库行锁和表锁的区别 | Blog</title>
   <meta name="keywords" content>
-  <meta name="description" content="数据库行锁和表锁的区别 | Blog">
+  <meta name="description" content="MySQL数据库行锁和表锁的区别 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="my-second-blog">
@@ -246,7 +246,7 @@
            href="/2019/09/29/数据库行锁和表锁的区别/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="数据库行锁和表锁的区别">数据库行锁和表锁的区别</span>
+            <span class="post-title" title="MySQL数据库行锁和表锁的区别">MySQL数据库行锁和表锁的区别</span>
             <span class="post-date" title="2019-09-29 10:03:32">2019/09/29</span>
         </a>
         
@@ -280,7 +280,7 @@
     <div class="pjax">
         <article id="post-数据库行锁和表锁的区别" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据库行锁和表锁的区别</h1>
+        <h1 class="article-title">MySQL数据库行锁和表锁的区别</h1>
     
     <div class="article-meta">
         
@@ -290,7 +290,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-29 10:03:32'>2019-09-29 10:03</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-29 10:10:16'>2019-09-29 10:03</time>
         
     </div>
     <div class="article-meta">
@@ -312,7 +312,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#行锁和表锁的区别"><span class="toc-text">行锁和表锁的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#行锁"><span class="toc-text">行锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表锁"><span class="toc-text">表锁</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,7 +327,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="行锁和表锁的区别"><a href="#行锁和表锁的区别" class="headerlink" title="行锁和表锁的区别"></a>行锁和表锁的区别</h1><h2 id="行锁"><a href="#行锁" class="headerlink" title="行锁"></a>行锁</h2><p><strong>特点</strong> 锁的粒度小，发生锁冲突的概率低、处理并发的能力强；开销大、加锁慢、会出现死锁<br><strong>加锁的方式</strong> 自动加锁。对于UPDATE、DELETE和INSERT语句，InnoDB(MySQL的数据库引擎之一，现为MySQL的默认存储引擎)会自动给涉及数据集加排他锁；对于普通SELECT语句，InnoDB不会加任何锁。  </p>
+<h2 id="表锁"><a href="#表锁" class="headerlink" title="表锁"></a>表锁</h2><p><strong>特点</strong> 开销小、加锁快、无死锁；锁粒度大，发生锁冲突的概率高，高并发下性能低<br><strong>加锁的方式</strong> 自动加锁。查询操作（SELECT），会自动给涉及的所有表加读锁，更新操作（UPDATE、DELETE、INSERT），会自动给涉及的表加写锁  </p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -340,12 +342,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据库行锁和表锁的区别</p>
+    <p><span class="copy-title">文章标题:</span>MySQL数据库行锁和表锁的区别</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-29, 10:03:32</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-29, 10:03:32</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/29/数据库行锁和表锁的区别/" title="数据库行锁和表锁的区别">http://yoursite.com/2019/09/29/数据库行锁和表锁的区别/</a>
+    <p><span class="copy-title">最后更新:</span>2019-09-29, 10:10:16</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/29/数据库行锁和表锁的区别/" title="MySQL数据库行锁和表锁的区别">http://yoursite.com/2019/09/29/数据库行锁和表锁的区别/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
