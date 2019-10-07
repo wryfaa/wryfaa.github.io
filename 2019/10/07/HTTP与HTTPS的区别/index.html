@@ -6,17 +6,17 @@
   <meta name="keywords" content>
   <meta name="description" content="HTTP与HTTPS的区别 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)   昵称：果冻虾仁   别名：隔壁老王   英文名：Jelly  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协">
+<meta name="description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP与HTTPS的区别">
 <meta property="og:url" content="http://yoursite.com/2019/10/07/HTTP与HTTPS的区别/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)   昵称：果冻虾仁   别名：隔壁老王   英文名：Jelly  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协">
+<meta property="og:description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常h">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-07T11:31:13.659Z">
+<meta property="og:updated_time" content="2019-10-07T11:32:04.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP与HTTPS的区别">
-<meta name="twitter:description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)   昵称：果冻虾仁   别名：隔壁老王   英文名：Jelly  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协">
+<meta name="twitter:description" content="HTTP的缺点： 通信使用明文，内容可能被窃听(重要密码泄露)   不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)   无法证明报文的完整性，有可能已遭篡改(运营商劫持)  HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常h">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -216,6 +216,14 @@
         </a>
         
         <a  class=""
+           href="/2019/09/20/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-09-20 17:35:26">2019/09/20</span>
+        </a>
+        
+        <a  class=""
            href="/2019/09/26/三层架构/"
            data-tag=""
            data-author="" >
@@ -237,14 +245,6 @@
            data-author="" >
             <span class="post-title" title="MySQL数据库行锁和表锁的区别">MySQL数据库行锁和表锁的区别</span>
             <span class="post-date" title="2019-09-29 10:03:32">2019/09/29</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/09/20/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-09-20 17:35:26">2019/09/20</span>
         </a>
         
     </nav>
@@ -271,12 +271,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-07 19:31:13'>2019-10-07 19:17</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-07 19:32:04'>2019-10-07 19:17</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:206</span>
+        <span>字数:190</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -319,15 +319,6 @@
 <ul>
 <li>无法证明报文的完整性，有可能已遭篡改(运营商劫持)</li>
 </ul>
-<ul>
-<li>昵称：果冻虾仁</li>
-</ul>
-<ul>
-<li>别名：隔壁老王</li>
-</ul>
-<ul>
-<li>英文名：Jelly</li>
-</ul>
 <h2 id="HTTPS："><a href="#HTTPS：" class="headerlink" title="HTTPS："></a>HTTPS：</h2><p>https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=https<br>https并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常http直接和tcp通信，当使用ssl时则演变成先和ssl通信，再由ssl和tcp通信。<br>所谓https，其实就是身披ssl协议这层外壳的http</p>
 <p>参考文章：<a href="https://www.cnblogs.com/jesse131/p/9080925.html" target="_blank" rel="noopener">https://www.cnblogs.com/jesse131/p/9080925.html</a></p>
 
@@ -344,10 +335,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>HTTP与HTTPS的区别</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">206</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">190</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-07, 19:17:18</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-07, 19:31:13</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-07, 19:32:04</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/07/HTTP与HTTPS的区别/" title="HTTP与HTTPS的区别">http://yoursite.com/2019/10/07/HTTP与HTTPS的区别/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
