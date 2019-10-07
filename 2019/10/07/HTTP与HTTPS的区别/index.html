@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>二叉树 | Blog</title>
+  <title>HTTP与HTTPS的区别 | Blog</title>
   <meta name="keywords" content>
-  <meta name="description" content="二叉树 | Blog">
+  <meta name="description" content="HTTP与HTTPS的区别 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="HTTP的缺点：** 通信使用明文，内容可能被窃听(重要密码泄露)** 不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)** 无法证明报文的完整性，有可能已遭篡改(运营商劫持) HTTPS：https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=httpshttps并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常">
 <meta property="og:type" content="article">
@@ -259,9 +259,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-二叉树" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-HTTP与HTTPS的区别" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">二叉树</h1>
+        <h1 class="article-title">HTTP与HTTPS的区别</h1>
     
     <div class="article-meta">
         
@@ -271,12 +271,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-20 21:33:11'>2019-09-20 21:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-07 19:25:28'>2019-10-07 19:17</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:178</span>
+        <span>字数:190</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -295,7 +295,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#三种遍历的特点："><span class="toc-text">三种遍历的特点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结："><span class="toc-text">总结：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP的缺点："><span class="toc-text">HTTP的缺点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTPS："><span class="toc-text">HTTPS：</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -310,21 +310,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="三种遍历的特点："><a href="#三种遍历的特点：" class="headerlink" title="三种遍历的特点："></a>三种遍历的特点：</h1><ol>
-<li>前序遍历：根左右 </li>
-<li>中序遍历：左根右 </li>
-<li>后序遍历：左右根</li>
-</ol>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ol>
-<li>前序的第一个是整个树的根</li>
-<li>后序的最后一个是整个树的根</li>
-<li>中序用来判别左右子树的划分</li>
-<li>前序序列中左子树部分的第一个节点是左子树的根节点</li>
-<li>前序序列中右子树部分的第一个节点是右子树的根节点</li>
-<li>后序序列中左子树部分的最后一个节点是左子树的根节点</li>
-<li>后序序列中右子树部分的最后一个节点是右子树的根节点</li>
-</ol>
-<p>参考文章：<a href="https://blog.csdn.net/qq_33396481/article/details/80657546" target="_blank" rel="noopener">https://blog.csdn.net/qq_33396481/article/details/80657546</a></p>
+        <h2 id="HTTP的缺点："><a href="#HTTP的缺点：" class="headerlink" title="HTTP的缺点："></a>HTTP的缺点：</h2><p>** 通信使用明文，内容可能被窃听(重要密码泄露)<br>** 不验证通信方身份，有可能遭遇伪装(跨站点请求伪造)<br>** 无法证明报文的完整性，有可能已遭篡改(运营商劫持)</p>
+<h2 id="HTTPS："><a href="#HTTPS：" class="headerlink" title="HTTPS："></a>HTTPS：</h2><p>https是在http协议基础上加入加密处理和认证机制以及完整性保护，即http+加密+认证+完整性保护=https<br>https并非应用层的一种新协议，只是http通信接口部分用ssl/tls协议代替而已。通常http直接和tcp通信，当使用ssl时则演变成先和ssl通信，再由ssl和tcp通信。<br>所谓https，其实就是身披ssl协议这层外壳的http</p>
+<p>参考文章：<a href="https://www.cnblogs.com/jesse131/p/9080925.html" target="_blank" rel="noopener">https://www.cnblogs.com/jesse131/p/9080925.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -338,12 +326,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>二叉树</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">178</span></p>
+    <p><span class="copy-title">文章标题:</span>HTTP与HTTPS的区别</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">190</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-20, 21:25:58</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-20, 21:33:11</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/20/二叉树/" title="二叉树">http://yoursite.com/2019/09/20/二叉树/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-07, 19:17:18</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-07, 19:25:28</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/07/HTTP与HTTPS的区别/" title="HTTP与HTTPS的区别">http://yoursite.com/2019/10/07/HTTP与HTTPS的区别/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
