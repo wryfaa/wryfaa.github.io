@@ -6,17 +6,17 @@
   <meta name="keywords" content>
   <meta name="description" content="Hello World | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="一、数据库引擎数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。 二、类型你能用的数据库引擎取决于mysql在安装的时候是如何被编译的。要添">
+<meta name="description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库引擎">
-<meta property="og:url" content="http://yoursite.com/2019/10/08/数据库引擎/index.html">
+<meta property="og:title" content="数据库索引">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/数据库索引/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="一、数据库引擎数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。 二、类型你能用的数据库引擎取决于mysql在安装的时候是如何被编译的。要添">
+<meta property="og:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-08T12:08:36.529Z">
+<meta property="og:updated_time" content="2019-10-08T12:38:57.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库引擎">
-<meta name="twitter:description" content="一、数据库引擎数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。 二、类型你能用的数据库引擎取决于mysql在安装的时候是如何被编译的。要添">
+<meta name="twitter:title" content="数据库索引">
+<meta name="twitter:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -147,7 +147,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(9)</small></div></li>
+    <li><div class="all active">全部文章<small>(10)</small></div></li>
     
 </ul>
 <div class="left-bottom">
@@ -159,8 +159,8 @@
     </div>
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="9">
-<input type="hidden" id="yelog_site_word_count" value="2.9k">
+<input type="hidden" id="yelog_site_posts_number" value="10">
+<input type="hidden" id="yelog_site_word_count" value="3.6k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -216,27 +216,11 @@
         </a>
         
         <a  class=""
-           href="/2019/10/07/TCP与UDP的区别/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="TCP与UDP的区别">TCP与UDP的区别</span>
-            <span class="post-date" title="2019-10-07 19:43:18">2019/10/07</span>
-        </a>
-        
-        <a  class=""
            href="/2019/09/20/hello-world/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-09-20 17:35:26">2019/09/20</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/09/26/三层架构/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="三层架构">三层架构</span>
-            <span class="post-date" title="2019-09-26 09:29:05">2019/09/26</span>
         </a>
         
         <a  class=""
@@ -248,11 +232,11 @@
         </a>
         
         <a  class=""
-           href="/2019/10/08/数据库引擎/"
+           href="/2019/09/26/三层架构/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="数据库引擎">数据库引擎</span>
-            <span class="post-date" title="2019-10-08 19:47:26">2019/10/08</span>
+            <span class="post-title" title="三层架构">三层架构</span>
+            <span class="post-date" title="2019-09-26 09:29:05">2019/09/26</span>
         </a>
         
         <a  class=""
@@ -261,6 +245,30 @@
            data-author="" >
             <span class="post-title" title="接口和抽象类的区别">接口和抽象类的区别</span>
             <span class="post-date" title="2019-10-07 19:59:28">2019/10/07</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/数据库引擎/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库引擎">数据库引擎</span>
+            <span class="post-date" title="2019-10-08 19:47:26">2019/10/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/数据库索引/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库索引">数据库索引</span>
+            <span class="post-date" title="2019-10-08 20:18:14">2019/10/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/07/TCP与UDP的区别/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="TCP与UDP的区别">TCP与UDP的区别</span>
+            <span class="post-date" title="2019-10-07 19:43:18">2019/10/07</span>
         </a>
         
         <a  class=""
