@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>二叉树 | Blog</title>
+  <title>数据库引擎 | Blog</title>
   <meta name="keywords" content>
-  <meta name="description" content="二叉树 | Blog">
+  <meta name="description" content="数据库引擎 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一、数据库引擎数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。 二、类型你能用的数据库引擎取决于mysql在安装的时候是如何被编译的。要添">
 <meta property="og:type" content="article">
@@ -283,9 +283,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-二叉树" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据库引擎" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">二叉树</h1>
+        <h1 class="article-title">数据库引擎</h1>
     
     <div class="article-meta">
         
@@ -295,12 +295,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-20 21:33:11'>2019-09-20 21:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-08 20:06:28'>2019-10-08 19:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:178</span>
+        <span>字数:1.2k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -319,7 +319,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#三种遍历的特点："><span class="toc-text">三种遍历的特点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结："><span class="toc-text">总结：</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -334,21 +334,47 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="三种遍历的特点："><a href="#三种遍历的特点：" class="headerlink" title="三种遍历的特点："></a>三种遍历的特点：</h1><ol>
-<li>前序遍历：根左右 </li>
-<li>中序遍历：左根右 </li>
-<li>后序遍历：左右根</li>
-</ol>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ol>
-<li>前序的第一个是整个树的根</li>
-<li>后序的最后一个是整个树的根</li>
-<li>中序用来判别左右子树的划分</li>
-<li>前序序列中左子树部分的第一个节点是左子树的根节点</li>
-<li>前序序列中右子树部分的第一个节点是右子树的根节点</li>
-<li>后序序列中左子树部分的最后一个节点是左子树的根节点</li>
-<li>后序序列中右子树部分的最后一个节点是右子树的根节点</li>
-</ol>
-<p>参考文章：<a href="https://blog.csdn.net/qq_33396481/article/details/80657546" target="_blank" rel="noopener">https://blog.csdn.net/qq_33396481/article/details/80657546</a></p>
+        <p><strong>一、数据库引擎</strong><br>数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。</p>
+<p><strong>二、类型</strong><br>你能用的数据库引擎取决于mysql在安装的时候是如何被编译的。要添加一个新的引擎，就必须重新编译MYSQL。在缺省情况下，MYSQL支持三个引擎：ISAM、MYISAM和HEAP。另外两种类型INNODB和BERKLEY（BDB），也常常可以使用。</p>
+<blockquote>
+<ul>
+<li><strong>ISAM</strong><br>ISAM是一个定义明确且历经时间考验的数据表格管理方法，它在设计之时就考虑到数据库被查询的次数要远大于更新的次数。因此，ISAM执行读取操作的速度很快，而且不占用大量的内存和存储资源。ISAM的两个主要不足之处在于，它不支持事务处理，也不能够容错：如果你的硬盘崩溃了，那么数据文件就无法恢复了。如果你正在把ISAM用在关键任务应用程序里，那就必须经常备份你所有的实时数据，通过其复制特性，MYSQL能够支持这样的备份应用程序。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>MYISAM</strong><br>MYISAM是MYSQL的ISAM扩展格式和缺省的数据库引擎。除了提供ISAM里所没有的索引和字段管理的功能，MYISAM还使用一种表格锁定的机制，来优化多个并发的读写操作。其代价是你需要经常运行OPTIMIZE TABLE命令，来恢复被更新机制所浪费的空间。MYISAM还有一些有用的扩展，例如用来修复数据库文件的MYISAMCHK工具和用来恢复浪费空间的MYISAMPACK工具。<br>MYISAM强调了快速读取操作，这可能就是为什么MYSQL受到了WEB开发如此青睐的主要原因：在WEB开发中你所进行的大量数据操作都是读取操作。所以，大多数虚拟主机提供商和INTERNET平台提供商只允许使用MYISAM格式。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>HEAP</strong><br>HEAP允许只驻留在内存里的临时表格。驻留在内存里让HEAP要比ISAM和MYISAM都快，但是它所管理的数据是不稳定的，而且如果在关机之前没有进行保存，那么所有的数据都会丢失。在数据行被删除的时候，HEAP也不会浪费大量的空间。HEAP表格在你需要使用SELECT表达式来选择和操控数据的时候非常有用。要记住，在用完表格之后就删除表格。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>INNODB和BERKLEYDB</strong><br>INNODB和BERKLEYDB（BDB）数据库引擎都是造就MYSQL灵活性的技术的直接产品，这项技术就是MYSQL++ API。在使用MYSQL的时候，你所面对的每一个挑战几乎都源于ISAM和MYISAM数据库引擎不支持事务处理也不支持外来键。尽管要比ISAM和MYISAM引擎慢很多，但是INNODB和BDB包括了对事务处理和外来键的支持，这两点都是前两个引擎所没有的。如前所述，如果你的设计需要这些特性中的一者或者两者，那你就要被迫使用后两个引擎中的一个了。</li>
+</ul>
+</blockquote>
+<p><strong>三、MyISAM与InnoDB 的区别</strong></p>
+<ul>
+<li>事务安全（MyISAM不支持事务，INNODB支持事务）</li>
+</ul>
+<ul>
+<li>外键 （MyISAM 不支持外键， INNODB支持外键）</li>
+<li>锁机制（MyISAM是表锁，innodb是行锁）</li>
+<li>查询和添加速度（MyISAM批量插入速度快） </li>
+<li>支持全文索引（MyISAM支持全文索引，INNODB不支持全文索引）</li>
+<li>MyISAM内存空间使用率比InnoDB低</li>
+</ul>
+<p><strong>四、如何选择存储引擎</strong> </p>
+<ul>
+<li>是否要支持事务，如果要请选择innodb，如果不需要可以考虑MyISAM</li>
+<li>如果表中绝大多数都只是读查询，可以考虑MyISAM，如果既有读写也挺频繁，请使用InnoDB</li>
+<li>系统崩溃后，MyISAM恢复起来更困难，能否接受</li>
+<li>MySQL5.5版本开始Innodb已经成为Mysql的默认引擎(之前是MyISAM)，说明其优势是有目共睹的，如果你不知道用什么，那就用InnoDB，至少不会差</li>
+</ul>
+<p><strong>五、数据库底层实现原理</strong><br>参考文章：<a href="https://www.cnblogs.com/klb561/p/10344364.html" target="_blank" rel="noopener">https://www.cnblogs.com/klb561/p/10344364.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -362,12 +388,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>二叉树</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">178</span></p>
+    <p><span class="copy-title">文章标题:</span>数据库引擎</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.2k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-20, 21:25:58</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-20, 21:33:11</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/20/二叉树/" title="二叉树">http://yoursite.com/2019/09/20/二叉树/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-08, 19:47:26</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-08, 20:06:28</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/08/数据库引擎/" title="数据库引擎">http://yoursite.com/2019/10/08/数据库引擎/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
