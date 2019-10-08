@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-08T12:38:57.538Z">
+<meta property="og:updated_time" content="2019-10-08T12:40:39.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库索引">
 <meta name="twitter:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
@@ -240,19 +240,19 @@
         </a>
         
         <a  class=""
-           href="/2019/09/20/二叉树/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="二叉树">二叉树</span>
-            <span class="post-date" title="2019-09-20 21:25:58">2019/09/20</span>
-        </a>
-        
-        <a  class=""
            href="/2019/10/07/接口和抽象类的区别/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="接口和抽象类的区别">接口和抽象类的区别</span>
             <span class="post-date" title="2019-10-07 19:59:28">2019/10/07</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/20/二叉树/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="二叉树">二叉树</span>
+            <span class="post-date" title="2019-09-20 21:25:58">2019/09/20</span>
         </a>
         
         <a  class=""
@@ -264,19 +264,19 @@
         </a>
         
         <a  class=""
-           href="/2019/10/08/数据库索引/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="数据库索引">数据库索引</span>
-            <span class="post-date" title="2019-10-08 20:18:14">2019/10/08</span>
-        </a>
-        
-        <a  class=""
            href="/2019/09/29/数据库行锁和表锁的区别/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="MySQL数据库行锁和表锁的区别">MySQL数据库行锁和表锁的区别</span>
             <span class="post-date" title="2019-09-29 10:03:32">2019/09/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/数据库索引/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库索引">数据库索引</span>
+            <span class="post-date" title="2019-10-08 20:18:14">2019/10/08</span>
         </a>
         
     </nav>
@@ -303,7 +303,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-08 20:38:57'>2019-10-08 20:18</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-08 20:40:39'>2019-10-08 20:18</time>
         
     </div>
     <div class="article-meta">
@@ -345,13 +345,13 @@
         <p>索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。</p>
 <h2 id="主要种类"><a href="#主要种类" class="headerlink" title="主要种类"></a>主要种类</h2><p>数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。<br>根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集索引。</p>
 <blockquote>
-<p>-<strong>唯一索引</strong><br>唯一索引是不允许其中任何两行具有相同索引值的索引。当现有数据中存在重复的键值时，大多数数据库不允许将新创建的唯一索引与表一起保存。数据库还可能防止添加将在表中创建重复键值的新数据。例如，如果在employee表中职员的姓(lname)上创建了唯一索引，则任何两个员工都不能同姓。</p>
+<p><strong>唯一索引</strong><br>唯一索引是不允许其中任何两行具有相同索引值的索引。当现有数据中存在重复的键值时，大多数数据库不允许将新创建的唯一索引与表一起保存。数据库还可能防止添加将在表中创建重复键值的新数据。例如，如果在employee表中职员的姓(lname)上创建了唯一索引，则任何两个员工都不能同姓。</p>
 </blockquote>
 <blockquote>
-<p>-<strong>主键索引</strong><br>数据库表经常有一列或多列组合，其值唯一标识表中的每一行。该列称为表的主键。在数据库关系图中为表定义主键将自动创建主键索引，主键索引是唯一索引的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问。</p>
+<p><strong>主键索引</strong><br>数据库表经常有一列或多列组合，其值唯一标识表中的每一行。该列称为表的主键。在数据库关系图中为表定义主键将自动创建主键索引，主键索引是唯一索引的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问。</p>
 </blockquote>
 <blockquote>
-<p>-<strong>聚集索引</strong><br>在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。聚集索引和非聚集索引的区别，如字典默认按字母顺序排序，读者如知道某个字的读音可根据字母顺序快速定位。因此聚集索引和表的内容是在一起的。如读者需查询某个生僻字，则需按字典前面的索引，举例按偏旁进行定位，找到该字对应的页数，再打开对应页数找到该字。这种通过两个地方而查询到某个字的方式就如非聚集索引。</p>
+<p><strong>聚集索引</strong><br>在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。聚集索引和非聚集索引的区别，如字典默认按字母顺序排序，读者如知道某个字的读音可根据字母顺序快速定位。因此聚集索引和表的内容是在一起的。如读者需查询某个生僻字，则需按字典前面的索引，举例按偏旁进行定位，找到该字对应的页数，再打开对应页数找到该字。这种通过两个地方而查询到某个字的方式就如非聚集索引。</p>
 </blockquote>
 <h2 id="MySQL索引原理"><a href="#MySQL索引原理" class="headerlink" title="MySQL索引原理"></a>MySQL索引原理</h2><p>参考文章：<a href="https://blog.csdn.net/u013235478/article/details/50625677" target="_blank" rel="noopener">https://blog.csdn.net/u013235478/article/details/50625677</a></p>
 
@@ -371,7 +371,7 @@
     <p><span class="copy-title">文章字数:</span><span class="post-count">679</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-08, 20:18:14</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-08, 20:38:57</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-08, 20:40:39</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/08/数据库索引/" title="数据库索引">http://yoursite.com/2019/10/08/数据库索引/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
