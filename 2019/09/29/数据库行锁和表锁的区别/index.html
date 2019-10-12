@@ -6,17 +6,19 @@
   <meta name="keywords" content>
   <meta name="description" content="MySQL数据库行锁和表锁的区别 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
+<meta name="description" content="1.Servlet容器Tomcat容器分四个等级，真正管理servlet的容器是context容器，一个web应用对应一个context容器，也就是servlet运行时的servlet容器。添加一个web应用创建一个standcontext容器，并且给这个context设置必要的参数，url和path分别代表这个应该在tomcat中的访问路径和物理路径。 2.Servlet的生命周期Servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库索引">
-<meta property="og:url" content="http://yoursite.com/2019/10/08/数据库索引/index.html">
+<meta property="og:title" content="Servlet的工作原理">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/Servlet的工作原理/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
+<meta property="og:description" content="1.Servlet容器Tomcat容器分四个等级，真正管理servlet的容器是context容器，一个web应用对应一个context容器，也就是servlet运行时的servlet容器。添加一个web应用创建一个standcontext容器，并且给这个context设置必要的参数，url和path分别代表这个应该在tomcat中的访问路径和物理路径。 2.Servlet的生命周期Servlet">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-08T12:40:39.511Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20180312203456544">
+<meta property="og:updated_time" content="2019-10-12T07:08:23.430Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库索引">
-<meta name="twitter:description" content="索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。 主要种类数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集">
+<meta name="twitter:title" content="Servlet的工作原理">
+<meta name="twitter:description" content="1.Servlet容器Tomcat容器分四个等级，真正管理servlet的容器是context容器，一个web应用对应一个context容器，也就是servlet运行时的servlet容器。添加一个web应用创建一个standcontext容器，并且给这个context设置必要的参数，url和path分别代表这个应该在tomcat中的访问路径和物理路径。 2.Servlet的生命周期Servlet">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180312203456544">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -147,7 +149,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(10)</small></div></li>
+    <li><div class="all active">全部文章<small>(11)</small></div></li>
     
 </ul>
 <div class="left-bottom">
@@ -159,8 +161,8 @@
     </div>
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="10">
-<input type="hidden" id="yelog_site_word_count" value="3.6k">
+<input type="hidden" id="yelog_site_posts_number" value="11">
+<input type="hidden" id="yelog_site_word_count" value="4.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -216,6 +218,14 @@
         </a>
         
         <a  class=""
+           href="/2019/10/12/Servlet的工作原理/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Servlet的工作原理">Servlet的工作原理</span>
+            <span class="post-date" title="2019-10-12 14:48:19">2019/10/12</span>
+        </a>
+        
+        <a  class=""
            href="/2019/10/07/TCP与UDP的区别/"
            data-tag=""
            data-author="" >
@@ -240,6 +250,22 @@
         </a>
         
         <a  class=""
+           href="/2019/10/08/数据库引擎/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库引擎">数据库引擎</span>
+            <span class="post-date" title="2019-10-08 19:47:26">2019/10/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/数据库索引/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库索引">数据库索引</span>
+            <span class="post-date" title="2019-10-08 20:18:14">2019/10/08</span>
+        </a>
+        
+        <a  class=""
            href="/2019/10/07/接口和抽象类的区别/"
            data-tag=""
            data-author="" >
@@ -256,27 +282,11 @@
         </a>
         
         <a  class=""
-           href="/2019/10/08/数据库引擎/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="数据库引擎">数据库引擎</span>
-            <span class="post-date" title="2019-10-08 19:47:26">2019/10/08</span>
-        </a>
-        
-        <a  class=""
            href="/2019/09/29/数据库行锁和表锁的区别/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="MySQL数据库行锁和表锁的区别">MySQL数据库行锁和表锁的区别</span>
             <span class="post-date" title="2019-09-29 10:03:32">2019/09/29</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/10/08/数据库索引/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="数据库索引">数据库索引</span>
-            <span class="post-date" title="2019-10-08 20:18:14">2019/10/08</span>
         </a>
         
     </nav>

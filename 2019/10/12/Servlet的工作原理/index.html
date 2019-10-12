@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>数据库索引 | Blog</title>
+  <title>Servlet的工作原理 | Blog</title>
   <meta name="keywords" content>
-  <meta name="description" content="数据库索引 | Blog">
+  <meta name="description" content="Servlet的工作原理 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1.Servlet容器Tomcat容器分四个等级，真正管理servlet的容器是context容器，一个web应用对应一个context容器，也就是servlet运行时的servlet容器。添加一个web应用创建一个standcontext容器，并且给这个context设置必要的参数，url和path分别代表这个应该在tomcat中的访问路径和物理路径。 2.Servlet的生命周期Servlet">
 <meta property="og:type" content="article">
@@ -301,9 +301,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-数据库索引" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Servlet的工作原理" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据库索引</h1>
+        <h1 class="article-title">Servlet的工作原理</h1>
     
     <div class="article-meta">
         
@@ -313,12 +313,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-08 20:40:39'>2019-10-08 20:18</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-12 15:08:23'>2019-10-12 14:48</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:679</span>
+        <span>字数:618</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -337,7 +337,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主要种类"><span class="toc-text">主要种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL索引原理"><span class="toc-text">MySQL索引原理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Servlet容器"><span class="toc-text">1.Servlet容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Servlet的生命周期"><span class="toc-text">2.Servlet的生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Servlet的工作原理"><span class="toc-text">3.Servlet的工作原理</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -352,18 +352,31 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。</p>
-<h2 id="主要种类"><a href="#主要种类" class="headerlink" title="主要种类"></a>主要种类</h2><p>数据库索引好比是一本书前面的目录，能加快数据库的查询速度。索引分为聚簇索引和非聚簇索引两种，聚簇索引 是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。<br>根据数据库的功能，可以在数据库设计器中创建三种索引：唯一索引、主键索引和聚集索引。</p>
+        <h2 id="1-Servlet容器"><a href="#1-Servlet容器" class="headerlink" title="1.Servlet容器"></a>1.Servlet容器</h2><p><img src="https://img-blog.csdn.net/20180312203456544" alt="我的头像"><br>Tomcat容器分四个等级，真正管理servlet的容器是context容器，一个web应用对应一个context容器，也就是servlet运行时的servlet容器。添加一个web应用创建一个standcontext容器，并且给这个context设置必要的参数，url和path分别代表这个应该在tomcat中的访问路径和物理路径。</p>
+<h2 id="2-Servlet的生命周期"><a href="#2-Servlet的生命周期" class="headerlink" title="2.Servlet的生命周期"></a>2.Servlet的生命周期</h2><p>Servlet的生命周期可以分为三个阶段：初始化（init）、运行（service）、销毁（destory）</p>
 <blockquote>
-<p><strong>唯一索引</strong><br>唯一索引是不允许其中任何两行具有相同索引值的索引。当现有数据中存在重复的键值时，大多数数据库不允许将新创建的唯一索引与表一起保存。数据库还可能防止添加将在表中创建重复键值的新数据。例如，如果在employee表中职员的姓(lname)上创建了唯一索引，则任何两个员工都不能同姓。</p>
+<p>初始化阶段</p>
+<ul>
+<li>Servlet容器加载servlet类，把servlet类的.class文件中的数据读到内存中</li>
+<li>Servlet容器创建一个ServletConfig对象，ServletConfig对象包含了Servlet的初始化配置信息</li>
+<li>Servlet容器创建一个servlet对象</li>
+<li>Servlet容器调用servlet对象的init方法进行初始化</li>
+</ul>
 </blockquote>
 <blockquote>
-<p><strong>主键索引</strong><br>数据库表经常有一列或多列组合，其值唯一标识表中的每一行。该列称为表的主键。在数据库关系图中为表定义主键将自动创建主键索引，主键索引是唯一索引的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问。</p>
+<p>运行阶段</p>
+<ul>
+<li>当servlet容器接收到一个请求时，servlet容器会针对这个请求创建servletRequest、servletResponse对象。然后调用service方法。并把这两个参数传递给service方法。Service方法通过servletRequest对象获得请求的信息。并处理该请求。再通过servletResponse对象生成这个请求的响应结果。然后销毁servletRequest和servletResponse对象。我们不管这个请求是post提交的还是get提交的，最终这个请求都会由service方法来处理</li>
+</ul>
 </blockquote>
 <blockquote>
-<p><strong>聚集索引</strong><br>在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。聚集索引和非聚集索引的区别，如字典默认按字母顺序排序，读者如知道某个字的读音可根据字母顺序快速定位。因此聚集索引和表的内容是在一起的。如读者需查询某个生僻字，则需按字典前面的索引，举例按偏旁进行定位，找到该字对应的页数，再打开对应页数找到该字。这种通过两个地方而查询到某个字的方式就如非聚集索引。</p>
+<p>销毁阶段</p>
+<ul>
+<li>当Web应用被终止时，servlet容器会先调用servlet对象的destrory方法，然后再销毁servlet对象，同时也会销毁与servlet对象相关联的servletConfig对象。我们可以在destroy方法的实现中，释放servlet所占用的资源，如关闭数据库连接，关闭文件输入输出流等</li>
+</ul>
 </blockquote>
-<h2 id="MySQL索引原理"><a href="#MySQL索引原理" class="headerlink" title="MySQL索引原理"></a>MySQL索引原理</h2><p>参考文章：<a href="https://blog.csdn.net/u013235478/article/details/50625677" target="_blank" rel="noopener">https://blog.csdn.net/u013235478/article/details/50625677</a></p>
+<p><strong>Notes:</strong>在servlet生命周期中，servlet的初始化和和销毁阶段只会发生一次，而service方法执行的次数则取决于servlet被客户端访问的次数</p>
+<h2 id="3-Servlet的工作原理"><a href="#3-Servlet的工作原理" class="headerlink" title="3.Servlet的工作原理"></a>3.Servlet的工作原理</h2><p>鼠标点击事件发出一个HTTP请求以后，服务器会将请求移交给servlet容器，servlet容器首先对所请求的URL进行解析并根据web.xml配置文件找到相应的处理servlet，同时将request、response对象传递给它，servlet通过request对象可知客户端的请求者、请求信息以及其他的信息等，servlet在处理完请求后回把所需要返回的信息放入response对象中并返回客户端，servlet一旦处理完请求，servlet容器就会刷新respons对象，并把控制权重新返还给web服务器。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -377,12 +390,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>数据库索引</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">679</span></p>
+    <p><span class="copy-title">文章标题:</span>Servlet的工作原理</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">618</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王廷峰">王廷峰</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-08, 20:18:14</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-08, 20:40:39</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/08/数据库索引/" title="数据库索引">http://yoursite.com/2019/10/08/数据库索引/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-12, 14:48:19</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-12, 15:08:23</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/12/Servlet的工作原理/" title="Servlet的工作原理">http://yoursite.com/2019/10/12/Servlet的工作原理/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
